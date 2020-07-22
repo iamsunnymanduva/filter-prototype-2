@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>ASL Look-up</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/filter.js"></script>
+  </head>
+  <body>
+    <section class="toolbar">
+      <div class="menu">
+        <div class="home">
+          <h1><a href="video.html?">Next</a></h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <a id="button"></a>
+      <div class="results-wrapper">
+        <div class="title-container">
+          <div class="results-title">
+            <h3>Search Results |</h3>
+            <p>Displaying <span class="number-of-signs"> 100 </span> signs</p>
+          </div>
+        </div>
+
+        <div class="filter-container">
+          <div class="filter-label">Filter By:</div>
+          <div class="filter-names">
+            <div class="dropdown">
+              <button class="dropbtn">Hands</button>
+              <div class="dropdown-content">
+                <a onclick="filterByType('hands', 1)">1</a>
+                <a onclick="filterByType('hands', 2)">2</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Hand Location</button>
+              <div class="dropdown-content">
+                <a onclick="filterByType('location', 'The whole face/head')"
+                  >The whole face/head</a
+                >
+                <a onclick="filterByType('location', 'Temple')">Temple</a>
+                <a onclick="filterByType('location', 'The trunk')">The trunk</a>
+                <a onclick="filterByType('location', 'Chin')">Chin</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-grid-container">
+          <div id="signs" class="results-grid"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
