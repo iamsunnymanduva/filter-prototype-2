@@ -116,22 +116,29 @@ function filterByType(type, value) {
     results = [...signs]
   }
 
-  // loop through the results and create a div with an img element for each sign
-  // append the above elements to signs container
-  results.forEach((sign) => {
-    // const divElement = document.createElement('div')
-    // const imgElement = document.createElement('img')
-    // const labelElement = document.createElement('p')
-    // labelElement.classList.add('result-title')
-    // imgElement.classList.add('result-image')
-    // imgElement.src = sign.URL
-    // imgElement.alt = `${sign.name.toLocaleUpperCase()} Sign Image`
-    // imgElement.title = `${sign.name} Sign Image`
-    // labelElement.innerText = `${sign.name}`
-    // divElement.appendChild(imgElement)
-    // divElement.appendChild(labelElement)
-    // divElement.classList.add('result-box')
-    // signsContainer.appendChild(divElement)
-    addSign(sign)
-  })
+  if (results.length === 0) {
+    $('.results-grid-container').innerHTML = ''
+    $('.results-grid-container').height(0)
+    const errorMessageEl = document.getElementById('error-message')
+    errorMessageEl.textContent = 'No signs found.'
+  } else {
+    // loop through the results and create a div with an img element for each sign
+    // append the above elements to signs container
+    results.forEach((sign) => {
+      // const divElement = document.createElement('div')
+      // const imgElement = document.createElement('img')
+      // const labelElement = document.createElement('p')
+      // labelElement.classList.add('result-title')
+      // imgElement.classList.add('result-image')
+      // imgElement.src = sign.URL
+      // imgElement.alt = `${sign.name.toLocaleUpperCase()} Sign Image`
+      // imgElement.title = `${sign.name} Sign Image`
+      // labelElement.innerText = `${sign.name}`
+      // divElement.appendChild(imgElement)
+      // divElement.appendChild(labelElement)
+      // divElement.classList.add('result-box')
+      // signsContainer.appendChild(divElement)
+      addSign(sign)
+    })
+  }
 }
