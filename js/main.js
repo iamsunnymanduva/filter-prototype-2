@@ -437,6 +437,8 @@ function __main__() {
   if (path == 'results.html') {
     setIndexQuery(i + 1, '.home a')
     loadGrid()
+    // console.log(SIGNS)
+    // SIGNS.forEach((sign) => addImage(sign.name))
     backToTop()
   } else if (path == 'record.html') {
     getCamera()
