@@ -31,29 +31,60 @@
           </div>
         </div>
 
-        <div class="filter-container">
-          <div class="filter-label">Filter By:</div>
-          <div class="filter-names">
-            <div class="dropdown">
-              <button class="dropbtn">Hands</button>
-              <div class="dropdown-content">
-                <a onclick="filterByType('hands', 1)">1</a>
-                <a onclick="filterByType('hands', 2)">2</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn">Hand Location</button>
-              <div class="dropdown-content">
-                <a onclick="filterByType('location', 'The whole face/head')"
-                  >The whole face/head</a
-                >
-                <a onclick="filterByType('location', 'Temple')">Temple</a>
-                <a onclick="filterByType('location', 'The trunk')">The trunk</a>
-                <a onclick="filterByType('location', 'Chin')">Chin</a>
-              </div>
-            </div>
+        <button class="toggle-filter-btn" onclick="toggleFilters()">
+          FILTER
+        </button>
+        <div class="filter-container" id="filters">
+          <div class="filter-column">
+            <h3>Number of Hands</h3>
+            <hr />
+            <p onclick="filterByType('hands', 1, 1)" id="hands-1">1</p>
+            <p onclick="filterByType('hands', 2, 2)" id="hands-2">2</p>
+          </div>
+          <div class="filter-column">
+            <h3>Handshape</h3>
+            <hr />
+            <p>Okati</p>
+            <p>Rendu</p>
+            <p>Moodu</p>
+            <p>Nalugu</p>
+            <p>Eidhu</p>
+            <p>Aaru</p>
+            <p>Yedu</p>
+          </div>
+          <div class="filter-column">
+            <h3>Palm Orientation</h3>
+            <hr />
+            <p>Shunnya</p>
+            <p>Ekah</p>
+            <p>Dvau</p>
+            <p>Tryah</p>
+          </div>
+          <div class="filter-column">
+            <h3>Location</h3>
+            <hr />
+            <p
+              onclick="filterByType('location', 'The whole face/head', 1)"
+              id="location-1"
+            >
+              The whole face/head
+            </p>
+            <p onclick="filterByType('location', 'Temple', 2)" id="location-2">
+              Temple
+            </p>
+            <p onclick="filterByType('location', 'Chin', 3)" id="location-3">
+              Chin
+            </p>
+          </div>
+          <div class="filter-column">
+            <h3>Movement</h3>
+            <hr />
+            <p>Uno</p>
+            <p>Dos</p>
           </div>
         </div>
+        <p id="clear" onclick="clearFilters()">Clear all</p>
+        <hr />
 
         <div class="results-grid-container">
           <div id="signs" class="results-grid"></div>
