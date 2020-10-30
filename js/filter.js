@@ -2863,11 +2863,11 @@ function filterByType(type, value, index = 0) {
     //   const positionIndex =   pIndex < 0 ? 0 : pIndex
 
     /* Same position experiment  */
-    const positionIndex = stimuliPostion || 0
+    //const positionIndex = stimuliPostion || 0
 
     /* Worst position experiment */
-    //const pIndex = stimuliPostion + 5
-    // const positionIndex = pIndex >= results.length ? results.length - 1 : pIndex
+    const pIndex = stimuliPostion + 5
+    const positionIndex = pIndex >= results.length ? results.length - 1 : pIndex
 
     let mainIndex = 0
     let position_sign = {}
