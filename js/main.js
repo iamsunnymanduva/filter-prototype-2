@@ -119,7 +119,6 @@ function loadGrid() {
       addImage(name, staticImage)
     })
     //bindResults(staticImage)
-    $('.number-of-signs').text(grid.length)
   })
 }
 
@@ -202,6 +201,9 @@ function shuffle(o) {
 }
 
 function generateResults(sign, similar, handshape, location, random, index) {
+  localStorage.setItem('stimuliSign', sign)
+  localStorage.setItem('stimuliPosition', index)
+
   deleteElement(sign, handshape)
   deleteElement(sign, location)
   for (let i = 0; i < similar.length; i++) {
@@ -236,7 +238,8 @@ function generateResults(sign, similar, handshape, location, random, index) {
   const MAX = 100
   let grid = signs.concat(filler.splice(0, MAX - signs.length - 1))
   grid.splice(index, 0, sign)
-
+  localStorage.setItem('signs', JSON.stringify(grid))
+  $('.number-of-signs').text(grid.length)
   return grid
 }
 

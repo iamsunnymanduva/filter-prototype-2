@@ -27,7 +27,7 @@
         <div class="title-container">
           <div class="results-title">
             <h3>Search Results |</h3>
-            <p>Displaying <span class="number-of-signs"> 100 </span> signs</p>
+            <p>Displaying <span class="number-of-signs"></span>&nbsp;signs</p>
           </div>
         </div>
 
@@ -38,49 +38,81 @@
           <div class="filter-column">
             <h3>Number of Hands</h3>
             <hr />
-            <p onclick="filterByType('hands', 1, 1)" id="hands-1">1</p>
-            <p onclick="filterByType('hands', 2, 2)" id="hands-2">2</p>
+            <p onclick="filterByType('hands', 'Ek', 1)" id="hands-1">Ek</p>
+            <p onclick="filterByType('hands', 'Dho', 2)" id="hands-2">Dho</p>
           </div>
           <div class="filter-column">
             <h3>Handshape</h3>
             <hr />
-            <p>Okati</p>
-            <p>Rendu</p>
-            <p>Moodu</p>
-            <p>Nalugu</p>
-            <p>Eidhu</p>
-            <p>Aaru</p>
-            <p>Yedu</p>
+            <p onclick="filterByType('handshape', 'A', 1)" id="handshape-1">
+              A
+            </p>
+            <p onclick="filterByType('handshape', 'B', 2)" id="handshape-2">
+              B
+            </p>
+            <p onclick="filterByType('handshape', 'C', 3)" id="handshape-3">
+              C
+            </p>
+            <p onclick="filterByType('handshape', 'D', 4)" id="handshape-4">
+              D
+            </p>
+            <p onclick="filterByType('handshape', 'E', 5)" id="handshape-5">
+              E
+            </p>
+            <p onclick="filterByType('handshape', 'F', 6)" id="handshape-6">
+              F
+            </p>
           </div>
           <div class="filter-column">
             <h3>Palm Orientation</h3>
             <hr />
-            <p>Shunnya</p>
-            <p>Ekah</p>
-            <p>Dvau</p>
-            <p>Tryah</p>
+            <p
+              onclick="filterByType('Palm Orientation', 'Okati', 1)"
+              id="Palm Orientation-1"
+            >
+              Okati
+            </p>
+            <p
+              onclick="filterByType('Palm Orientation', 'Rendu', 2)"
+              id="Palm Orientation-2"
+            >
+              Rendu
+            </p>
+            <p
+              onclick="filterByType('Palm Orientation', 'Moodu', 3)"
+              id="Palm Orientation-3"
+            >
+              Moodu
+            </p>
+            <p
+              onclick="filterByType('Palm Orientation', 'Naalugu', 4)"
+              id="Palm Orientation-4"
+            >
+              Naalugu
+            </p>
           </div>
           <div class="filter-column">
             <h3>Location</h3>
             <hr />
-            <p
-              onclick="filterByType('location', 'The whole face/head', 1)"
-              id="location-1"
-            >
-              The whole face/head
+            <p onclick="filterByType('location', 'Uno', 1)" id="location-1">
+              Uno
             </p>
-            <p onclick="filterByType('location', 'Temple', 2)" id="location-2">
-              Temple
+            <p onclick="filterByType('location', 'Dos', 2)" id="location-2">
+              Dos
             </p>
-            <p onclick="filterByType('location', 'Chin', 3)" id="location-3">
-              Chin
+            <p onclick="filterByType('location', 'Tres', 3)" id="location-3">
+              Tres
             </p>
           </div>
           <div class="filter-column">
             <h3>Movement</h3>
             <hr />
-            <p>Uno</p>
-            <p>Dos</p>
+            <p onclick="filterByType('movement', 'Onru', 1)" id="movement-1">
+              Onru
+            </p>
+            <p onclick="filterByType('movement', 'Irandu', 2)" id="movement-2">
+              Irandu
+            </p>
           </div>
         </div>
         <p id="clear" onclick="clearFilters()">Clear all</p>
