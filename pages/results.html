@@ -36,35 +36,41 @@
         </button>
         <div class="filter-container" id="filters">
           <div class="filter-column">
-            <h3>Number of Hands</h3>
+            <h3>Orientation</h3>
             <hr />
-            <p onclick="filterByType('hands', 'Ek', 1)" id="hands-1">Ek</p>
-            <p onclick="filterByType('hands', 'Dho', 2)" id="hands-2">Dho</p>
+            <p onclick="filterByType('hands', 'Ek', 1)" id="hands-1">Unidirectional</p>
+            <p onclick="filterByType('hands', 'Dho', 2)" id="hands-2">Repeated</p>
+          </div>
+          <div class="filter-column">
+            <h3>Location</h3>
+            <hr />
+            <p onclick="filterByType('handshape', 'A', 1)" id="handshape-1">
+              inspace
+            </p>
+            <p onclick="filterByType('handshape', 'B', 2)" id="handshape-2">
+              face
+            </p>
+            <p onclick="filterByType('handshape', 'C', 3)" id="handshape-3">
+              headside
+            </p>
+            <p onclick="filterByType('handshape', 'D', 4)" id="handshape-4">
+              palm
+            </p>
+            <p onclick="filterByType('handshape', 'E', 5)" id="handshape-5">
+              hand
+            </p>
+            <p onclick="filterByType('handshape', 'F', 6)" id="handshape-6">
+              arm
+            </p>
+            <p onclick="filterByType('handshape', 'F', 6)" id="handshape-6">
+              torso
+            </p>
+            <p onclick="filterByType('handshape', 'F', 6)" id="handshape-6">
+              other
+            </p>
           </div>
           <div class="filter-column">
             <h3>Handshape</h3>
-            <hr />
-            <p onclick="filterByType('handshape', 'A', 1)" id="handshape-1">
-              A
-            </p>
-            <p onclick="filterByType('handshape', 'B', 2)" id="handshape-2">
-              B
-            </p>
-            <p onclick="filterByType('handshape', 'C', 3)" id="handshape-3">
-              C
-            </p>
-            <p onclick="filterByType('handshape', 'D', 4)" id="handshape-4">
-              D
-            </p>
-            <p onclick="filterByType('handshape', 'E', 5)" id="handshape-5">
-              E
-            </p>
-            <p onclick="filterByType('handshape', 'F', 6)" id="handshape-6">
-              F
-            </p>
-          </div>
-          <div class="filter-column">
-            <h3>Palm Orientation</h3>
             <hr />
             <p
               onclick="filterByType('Palm Orientation', 'Okati', 1)"
@@ -92,26 +98,16 @@
             </p>
           </div>
           <div class="filter-column">
-            <h3>Location</h3>
+            <h3>Number of Hands</h3>
             <hr />
             <p onclick="filterByType('location', 'Uno', 1)" id="location-1">
-              Uno
+              One-handed, moving
             </p>
             <p onclick="filterByType('location', 'Dos', 2)" id="location-2">
-              Dos
+              Two-handed, symmetrical
             </p>
             <p onclick="filterByType('location', 'Tres', 3)" id="location-3">
-              Tres
-            </p>
-          </div>
-          <div class="filter-column">
-            <h3>Movement</h3>
-            <hr />
-            <p onclick="filterByType('movement', 'Onru', 1)" id="movement-1">
-              Onru
-            </p>
-            <p onclick="filterByType('movement', 'Irandu', 2)" id="movement-2">
-              Irandu
+              two-handed, alternatively
             </p>
           </div>
         </div>
